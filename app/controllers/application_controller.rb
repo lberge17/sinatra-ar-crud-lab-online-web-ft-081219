@@ -37,7 +37,10 @@ class ApplicationController < Sinatra::Base
   end
   
   patch '/models/:id' do
-    
+    @article = Article.find(:id)
+    @article.update(title: params['title'], content: params['content'])
+    @article.save
+    erb :show
   end
   
 end
