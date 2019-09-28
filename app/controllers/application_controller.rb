@@ -16,7 +16,8 @@ class ApplicationController < Sinatra::Base
   end
   
   post 'articles' do
-    @article = params["article"]
+    @article = Article.create(params["article"])
+    
     erb :show
   end
   
