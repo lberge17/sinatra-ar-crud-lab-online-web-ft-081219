@@ -16,6 +16,7 @@ class ApplicationController < Sinatra::Base
   end
   
   post 'articles' do
+    @article = params["article"]
     erb :show
   end
   
