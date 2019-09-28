@@ -3,5 +3,5 @@
 <br>
 <p>If you wish to delete this article, click delete. Beware this action cannot be undone.</p>
 <form method="POST" action="/articles/<%= @article.id %>">
-  <input>
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
 </form>
